@@ -11,5 +11,7 @@ const app =  express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use('/api/getGoals',require('./routes/goalRoutes'))
+app.use('/api/getUsers',require('./routes/userRoutes'))
+
 app.use(errorHandler);
 app.listen(port,()=> console.log("Server started succesfully on port",port));
